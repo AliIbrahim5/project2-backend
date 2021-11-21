@@ -4,11 +4,12 @@ const cardsModel = require("./../../db/models/cardsSchema");
 
 
 const addcard = (req, res) =>{
-const { name,img, dac, price ,isfav} = req.body;
+const { name,img, dac, price ,isfav,Brand} = req.body;
 
   const newcard = new cardsModel({
     name,
     img, 
+    Brand,
     dac,
     price,
     isfav

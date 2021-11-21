@@ -2,9 +2,10 @@ const mongoose = require("mongoose");
 
 const cards = new mongoose.Schema({
   name:{type: String, unique: true},  
-    img: { type: String, unique: true },
+    img: { type: String,  },
     dac: { type: String  },
-    price: { type: Number},
+    Brand:{type: String},
+    price: { type: String},
     isfav: { type: Boolean ,default: false },
   });
 
