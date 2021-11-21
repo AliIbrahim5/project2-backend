@@ -10,7 +10,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const DB = process.env.DB;
 
-mongoose.connect(`mongodb://localhost:27017/${DB}`, options).then(
+mongoose.connect(DB, options).then(
   () => {
     console.log("DB Ready To Use");
   },

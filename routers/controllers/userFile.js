@@ -2,15 +2,16 @@ const someModel = require("./../../db/models/userSchema");
 const mongoose = require("mongoose");
 
 
-const someFunc = (req, res) =>{
-const { someKey, someNumber } = req.body;
+const oneuser = (req, res) =>{
+const { username, email, password ,isDeleted} = req.body;
 
-  const newSomeData = new someModel({
-    someKey, 
-    someNumber 
+  const newuser = new someModel({
+    username, 
+    email,
+    password
   });
 
-  newSomeData 
+  newuser 
     .save()
     .then((result) => {
       res.json(result);
@@ -20,7 +21,7 @@ const { someKey, someNumber } = req.body;
     });
 }
 
-const anotherFunc = (req, res) =>{
+const alluserr = (req, res) =>{
     someModel
       .find({})
       .then((result) => {
@@ -32,4 +33,4 @@ const anotherFunc = (req, res) =>{
   };
 
 
-  module.exports= { someFunc, anotherFunc }
+  module.exports= { oneuser, alluserr }
