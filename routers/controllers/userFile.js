@@ -1,5 +1,6 @@
 const someModel = require("./../../db/models/userSchema");
-const mongoose = require("mongoose");
+
+// const mongoose = require("mongoose");
 
 
 const oneuser = (req, res) =>{
