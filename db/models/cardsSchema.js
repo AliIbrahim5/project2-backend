@@ -6,8 +6,8 @@ const cards = new mongoose.Schema({
     dac: { type: String  },
     Brand:{type: String},
     price: { type: String},
-    isfav: { type: Boolean ,default: false },
+    
   });
 
 
-  module.exports = mongoose.model("card", cards);
+  module.exports = mongoose.model("Cards", cards);
