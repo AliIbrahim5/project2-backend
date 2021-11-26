@@ -8,5 +8,4 @@ userRouter.put("/fav/:email/:_id", favoriteUser);
 userRouter.get("/favv/:email", getFavorite);
 userRouter.put("/removeFav/:email/:_id", removeFavoriteUser);
 userRouter.put("/favorite/:email/:ObjectId", favoriteUserTest);
-
 module.exports = userRouter 
