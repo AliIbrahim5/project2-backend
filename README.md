@@ -217,14 +217,25 @@ cardRouter.get("/allcards", allcards);
 
 ```
 userRouter.post("/caeert", oneuser);
+
 userRouter.get("/alluse", alluserr);
+
 userRouter.put("/fav/:email/:_id", favoriteUser);
+
 userRouter.get("/favv/:email", getFavorite);
-userRouter.put("/removeFav/:email/:_id", removeFavoriteUser);
-userRouter.put("/favorite/:email/:ObjectId", favoriteUserTest);
+
+userRouter.put("/removeFav/:email/:_id", 
+removeFavoriteUser);
+
+userRouter.put("/favorite/:email/:ObjectId", 
+favoriteUserTest);
+
 userRouter.put("/update/:_id", updateUser);
+
 userRouter.delete("/delete/:id", deleteUser);
+
 userRouter.put("/edit/:email", editFullName);
+
 userRouter.get("/email/:email", findUserByEmail);
 
 
@@ -262,8 +273,6 @@ const user = new mongoose.Schema({
   phone: { type: Number, unique: true },
   favoriteSchema: [{ type: mongoose.Schema.Types.ObjectId, ref: "Cards" }],
 });
-
-
 
 
 module.exports = mongoose.model("User", user);
