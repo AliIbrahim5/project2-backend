@@ -7,4 +7,4 @@ cardRouter.post("/addcard", addcard);
 cardRouter.get("/allcards", allcards);
 
 
-module.exports = cardRouter 
+module.exports = cardRouter;

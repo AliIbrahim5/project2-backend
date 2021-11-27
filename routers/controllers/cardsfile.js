@@ -2,20 +2,19 @@ const cardsModel = require("./../../db/models/cardsSchema");
 
 // const mongoose = require("mongoose");
 
-
-const addcard = (req, res) =>{
-const { name,img, dac, price ,isfav,Brand} = req.body;
+const addcard = (req, res) => {
+  const { name, img, dac, price, isfav, Brand } = req.body;
 
   const newcard = new cardsModel({
     name,
-    img, 
+    img,
     Brand,
     dac,
     price,
-    isfav
+    isfav,
   });
 
-  newcard 
+  newcard
     .save()
     .then((result) => {
       res.json(result);
@@ -23,18 +22,17 @@ const { name,img, dac, price ,isfav,Brand} = req.body;
     .catch((err) => {
       res.send(err);
     });
-}
+};
 
-const allcards = (req, res) =>{
-    cardsModel
-      .find({})
-      .then((result) => {
-        res.send(result);
-      })
-      .catch((err) => {
-        res.send(err);
-      });
-  };
+const allcards = (req, res) => {
+  cardsModel
+    .find({})
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      res.send(err);
+    });
+};
 
-
-  module.exports= { addcard, allcards }
+module.exports = { addcard, allcards };
